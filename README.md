@@ -54,6 +54,12 @@ make svg sprites
 }
 ```
 ##Chapter 7. Animating SVG
+SMIL (pronounced smile) sychronized multimedia integration language
+```
+<circle r="30" cx="50" cy="50" fill="orange">
+   <animate attributeName="cx" from="50" to="50" dur="1s" begin="click" fill="freeze">
+</circle>
+```
 ##Chapter 8. Some Design Features
 ##Chapter 9. Fallbacks
 
