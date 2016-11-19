@@ -60,6 +60,28 @@ SMIL (pronounced smile) sychronized multimedia integration language
    <animate attributeName="cx" from="50" to="50" dur="1s" begin="click" fill="freeze">
 </circle>
 ```
+
+fill:optional freeze/remove. like animation-fill-mode  
+
+#####point animation
+```
+<polygon points=" points .... ">
+<animate id="id" attributeName="points"
+dur="500ms"
+to=" new points"/>
+</polygon>
+```
+
+animateTransform
+```
+<animateTransform attributeName="transform" type="rotate" from="0 60 70" to="360 60 70" dur="10s" />
+```
+
+####ANIMATING PATHS
+```
+var path = document.querySelector(".path");
+var length =path.getTotalLength();
+```
 ##Chapter 8. Some Design Features
 ##Chapter 9. Fallbacks
 
