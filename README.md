@@ -24,6 +24,35 @@ make svg sprites
 ##Chapter 4. Build Tools
 ##Chapter 5. Optimizing SVG
 ##Chapter 6. Sizing and Scaling SVG
+
+```
+<svg class="logo">
+   <g class="magic">
+   </g>
+   <g class="walt">
+   </g>
+   <g class="disney">
+      <path class="d">
+   </g>
+</svg>
+```
+```
+@media(max-width:1000px){
+   .magic{
+      display:none;
+   }
+}
+@media(max-width:800px){
+   .walt{
+      display:none;
+   }
+}
+@media(max-width:600px){
+   .disney > *:not(.d){
+      display:none;
+   }
+}
+```
 ##Chapter 7. Animating SVG
 ##Chapter 8. Some Design Features
 ##Chapter 9. Fallbacks
