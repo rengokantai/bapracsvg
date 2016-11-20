@@ -63,7 +63,7 @@ SMIL (pronounced smile) sychronized multimedia integration language
 
 fill:optional freeze/remove. like animation-fill-mode  
 
-#####point animation
+####point animation
 ```
 <polygon points=" points .... ">
 <animate id="id" attributeName="points"
@@ -77,11 +77,39 @@ animateTransform
 <animateTransform attributeName="transform" type="rotate" from="0 60 70" to="360 60 70" dur="10s" />
 ```
 
-####ANIMATING PATHS
+###ANIMATING PATHS
 ```
 var path = document.querySelector(".path");
 var length =path.getTotalLength();
 ```
+
+###ANIMATING SVG WITH JAVASCRIPT
+```
+var circle = document.getElementById("orange"), positionX=0;
+var interval = setInterval(function(){
+   positionX +=0;
+   if(positionX>500){
+      position=0;
+   }
+   circle.setAtttribute("cx",positionX);
+},20)
+```
+
+setInterval isnt ideal for animations because the browser doesnot really optimize it  
+
+requestAnimationFrame (close 60FPS)
 ##Chapter 8. Some Design Features
+###FILTERS
+```
+.greyscale{
+   filter: grayscale(100%);
+}
+```
+filter
+```
+<filter id="grayscale">
+   <feColorMatrix type="saturate" values="0" />
+</filter>
+```
 ##Chapter 9. Fallbacks
 
