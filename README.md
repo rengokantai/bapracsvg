@@ -111,5 +111,38 @@ filter
    <feColorMatrix type="saturate" values="0" />
 </filter>
 ```
+apply filter via CSS
+```
+.greyscale-me{
+   filter: url("#grayscale");
+   filter: url("filters.svg#grayscale"); //use external file 
+}
+```
+
+filter
+```
+<g filter="url(#grayscale)">
+</g>
+```
+
+```
+img{
+   filter: url("#grayscale");
+}
+img:hover, img:focus{
+   filter: none;
+}
+```
+```
+<filter id="blur">
+   <feGaussianBlur in="SourceGraphic" stdDeviation="3" y="-" />
+</filter>
+```
+
+```
+<filter id="turbulence">
+   <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" result="turbulences_3" data-filterId="3"/>
+</filter>
+```
 ##Chapter 9. Fallbacks
 
