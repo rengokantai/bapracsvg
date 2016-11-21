@@ -144,5 +144,19 @@ img:hover, img:focus{
    <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" result="turbulences_3" data-filterId="3"/>
 </filter>
 ```
+```
+<filter id="turbulence">
+   <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" result="tub_3" data-filterId="3" />
+   <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="tub_3" scale="65" />
+</filter>
+```
 ##Chapter 9. Fallbacks
+```
+<svg width="100%" height="100%">
+   <pattern id="pt" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+   <circle cx="10" cy="10" r="10" fill="#f06060" />
+   </pattern>
+   <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)" />  //use this pattern
+</svg>
+```
 
